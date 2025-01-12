@@ -57,9 +57,25 @@ def exponential(n: int) -> int:
         #print(base) 
     return count 
 
+def exp_recur(n : int) -> int:
+    '''指数阶（递归实现）'''
+    if n == 1:
+        return 1
+    return exp_recur(n-1) + exp_recur(n-1) + 1 
+
+def logarithmic(n: int) -> int:
+    '''对数阶'''
+    count = 0 
+    while n > 1:
+        n = n / 2
+        count += 1
+    return count
+
+
+
 
 if __name__ == '__main__':
-    add = exponential(2) # 
+    add = logarithmic(4) # 
     print(f"🥷 :{add}")  # python 3.6以上版本支持
     # add_a = linear(50)
     # add_b = linear(100)
