@@ -53,7 +53,7 @@ def quadratic_recur(n: int) -> int:
     return quadratic_recur(n - 1)
 
 def build_tree(n: int) -> TreeNode:
-    '''指数阶（建立满二叉树）'''
+    '''指数阶（使用递归建立满二叉树）'''
     if n == 0:
         return None
     root = TreeNode(0)
@@ -71,7 +71,8 @@ if __name__ == "__main__":
     quadratic_recur(n)  # 平方阶（递归实现）
     root = build_tree(n)  # 指数阶（建立满二叉树）
     print_tree(root)  # 打印满二叉树
-
+    node1 = ListNode(1) 
+    print(node1)  # 打印单链表节点
     
 
 
